@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#e6e6e6;
+    color: white;
+    text-align: center;
+}
+
+a {
+    all: unset;
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1.25rem;
+}
+
+header {
+    display: flex;
+    padding:1.25rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #ff2a1f;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+header img {
+    width: 10rem;
+}
+
+span{
+    font-size: 1.20rem;
+    color: #ff2a1f;
+    font-weight: 700;
+}
+
+
+.nome-senai{
+    padding: 0.938rem;
+}
+
+.classificacao{
+    display: flex;
+    padding: 0.800rem;
+    font-size: 1.20rem;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    color: #ff2a1f;
+    font-weight: 700;
+}
+
+
+.circulo-container {
+    display: flex;
+    z-index: 10;
+    height: 400px;
+    margin: 40px auto;
+    background-color: transparent;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.circulo-container:first-child {
+    margin-left: 450px;
+}
+
+.circulo-container:last-child {
+    margin-right: 450px;
+}
+
+.titulo-circulo {
+    position: absolute;
+    width: 200px !important;
+    height: 200px !important;
+    top: -30px !important;
+    border-radius: 50%;
+    font-size: 1.50rem !important;
+    color: #b80000 !important;
+    background-color: rgb(219, 219, 219);
+    margin-bottom: 20px !important;
+}
+
+.circulo1 .titulo-circulo{
+    right: -105px !important;
+}
+
+.circulo2 .titulo-circulo {
+    left: -105px !important;
+}
+
+.circulo {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+/* Bolhas circulares */
+.circulo .balao {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+    transform-origin: center;
+}
+
+/* Distribuicao  esquerda*/
+.circulo1 .balao:first-child {
+    background-color: rgb(197, 85, 85);
+    top: -150px;
+    left: 95px;
+}
+
+.circulo1 .balao:nth-child(2) {
+    background-color: #b80000;
+    top: -210px;
+    left: -70px;
+}
+
+/*  */
+.circulo1 .balao:nth-child(3) {
+    background-color:  rgb(154, 105, 187);
+    top: -5px;
+    left: 200px;
+}
+
+/*  */
+
+.circulo1 .balao:nth-child(4) {
+    background-color:  rgb(86, 167, 21);
+    top: 210px;
+    left: -70px;
+}
+
+.circulo1 .balao:nth-child(5) {
+    background-color:  rgb(87, 150, 209);
+    top: 135px;
+    left: 95px;
+}
+
+.circulo1 .balao:nth-child(6) {
+    background-color:rgb(235, 150, 24);
+    top: -150px;
+    left: -235px;
+}
+
+.circulo1 .balao:nth-child(7) {
+    background-color: rgb(97, 201, 65) ;
+    top: 135px;
+    left: -235px;
+}
+
+.circulo1 .balao:nth-child(8) {
+    background-color: rgb(221, 188, 0);
+    top: -5px;
+    left: -330px;
+}
+
+
+/* Distribuição direita */
+.circulo2 .balao:first-child {
+    background-color: rgb(197, 85, 85);
+    top: -150px;
+    right: 95px;
+}
+
+.circulo2 .balao:nth-child(2) {
+    background-color:#b80000;
+    top: -210px;
+    right: -70px;
+}
+
+/*  */
+.circulo2 .balao:nth-child(3) {
+    background-color: rgb(154, 105, 187);
+    top: -5px;
+    right: 200px;
+}
+
+/*  */
+
+.circulo2 .balao:nth-child(4) {
+    background-color: rgb(86, 167, 21);
+    top: 210px;
+    right: -70px;
+}
+
+.circulo2 .balao:nth-child(5) {
+    background-color:  rgb(87, 150, 209);
+    top: 135px;
+    right: 95px;
+}
+
+.circulo2 .balao:nth-child(6) {
+    background-color:rgb(235, 150, 24);
+    top: -150px;
+    right: -235px;
+}
+
+.circulo2 .balao:nth-child(7) {
+    background-color: rgb(97, 201, 65);
+    top: 135px;
+    right: -235px;
+}
+
+.circulo2 .balao:nth-child(8) {
+    background-color: rgb(221, 188, 0);
+    top: -5px;
+    right: -330px;
+}
+
+/* Efeito Hover */
+.circulo .balao {
+    transition: transform 0.3s ease-in-out;
+}
+
+.circulo .balao:hover:not(.titulo-circulo) {
+    transform: scale(1.2);
+    cursor: pointer;
+}
